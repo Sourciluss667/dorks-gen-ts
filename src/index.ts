@@ -2,7 +2,7 @@ import * as prompts from 'prompts'
 import * as fs from 'fs'
 
 // Const
-const DEFAULT_PATHS = {keywords: 'txt/keywords.txt', page_format: 'txt/page_format.txt', page_type: 'txt/page_type.txt'}
+const DEFAULT_PATHS = {keywords: 'txt/keywords.txt', page_format: 'txt/page_format.txt', page_type: 'txt/page_type.txt', savePath: 'txt/d0rks.txt'}
 const RN = process.platform.toString() === 'win32' ? '\r\n' : '\n'
 
 
@@ -94,6 +94,8 @@ const main = async function () {
       message: 'Where to save .txt ? '
     }
   ])
+
+  if (savePath.s === '') savePath.s = DEFAULT_PATHS.savePath
 
   fs.writeFile(savePath.s, strDorks, err => {
     if (err) errorCallback(err, 'Write file fail !')
