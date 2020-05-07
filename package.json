@@ -1,0 +1,25 @@
+{
+  "name": "dorks-gen-ts",
+  "version": "1.0.0",
+  "description": "Dorks gen for google made inn TS",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc",
+    "dev": "tsc && node build/index.js",
+    "test": "echo \"Not implemented\""
+  },
+  "keywords": [
+    "dorks",
+    "gen",
+    "ts",
+    "google"
+  ],
+  "author": "Sourciluss667",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^13.13.5",
+    "@types/prompts": "^2.0.8",
+    "prompts": "^2.3.2"
+  }
+}
