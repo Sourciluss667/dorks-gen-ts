@@ -55,7 +55,7 @@ const main = async function () {
         { title: 'base', value: '0' },
         { title: 'inurl', value: '1' },
         { title: 'keywords detached', value: '2' },
-        { title: 'intext keywords and inurl', value: '3'}
+        { title: 'keywords and inurl', value: '3'}
       ],
       initial: 0
     })
@@ -117,7 +117,7 @@ const main = async function () {
         } else if (mode.value == 2) {
           strDorks += `${RN}${keyword} ${pagetype}${pageformat}`
         } else if (mode.value == 3) {
-          strDorks += `${RN}intext:${keyword} inurl:${pagetype}${pageformat}`
+          strDorks += `${RN}${keyword} inurl:"${pagetype}${pageformat}"`
         }
       });
     });
